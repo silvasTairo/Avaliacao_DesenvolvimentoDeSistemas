@@ -1,5 +1,6 @@
 import React from 'react'
 import bobbieGoodsKit from '../imagens/bobbieGoodsKit.png';
+import bobbiegoods from '../imagens/bobbiegoods.jpg';
 
 function Produtos() {
   return (
@@ -57,7 +58,7 @@ function Produtos() {
             </div>
           </div>
           <div className="produto-card">
-            <img src={bobbieGoodsKit} alt="Bobbie Goods" className="produto-img" />
+            <img src={bobbiegoods} alt="Bobbie Goods" className="produto-img" />
             <b className="produto-nome">Bobbie Goods</b>
             <span className="produto-preco">R$ 17,00</span>
             <div className="produto-desconto">
@@ -84,7 +85,7 @@ function Produtos() {
             </div>
           </div>
           <div className="produto-card">
-            <img src={bobbieGoodsKit} alt="Bobbie Goods" className="produto-img" />
+            <img src={bobbiegoods} alt="Bobbie Goods" className="produto-img" />
             <b className="produto-nome">Bobbie Goods</b>
             <span className="produto-preco">R$ 17,00</span>
             <div className="produto-desconto">
@@ -111,7 +112,7 @@ function Produtos() {
             </div>
           </div>
           <div className="produto-card">
-            <img src={bobbieGoodsKit} alt="Bobbie Goods" className="produto-img" />
+            <img src={bobbiegoods} alt="Bobbie Goods" className="produto-img" />
             <b className="produto-nome">Bobbie Goods</b>
             <span className="produto-preco">R$ 17,00</span>
             <div className="produto-desconto">
