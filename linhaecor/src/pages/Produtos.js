@@ -31,11 +31,14 @@ function Produtos() {
       <main className="produtos-main">
         <div className="produtos-main-header">
           <h2 className="produtos-main-titulo">Escolar</h2>
-          <div className="produtos-main-cadastro">
-            <b>Cadastre-se e ganhe 10% de desconto</b>
-            <span>Use o cupom CADASTRO10 e aproveite</span>
+          <div className="produtos-main-cadastro-bar">
+            <div className="produtos-main-cadastro">
+              <b>Cadastre-se e ganhe 10% de desconto</b>
+              <span>Use o cupom CADASTRO10 e aproveite</span>
+            </div>
+            <input className="produtos-main-email" placeholder="Digite o seu email" />
+            <button className="produtos-main-enviar">{'>'}</button>
           </div>
-          <input className="produtos-main-email" placeholder="Digite o seu email" />
         </div>
         <div className="produtos-grid">
           {/* Repita este bloco para cada produto */}

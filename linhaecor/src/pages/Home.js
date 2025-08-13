@@ -4,6 +4,7 @@ import BarraInfo from '../components/BarraInfo';
 import DualBanner from '../components/DualBanner';
 import ProdutosLinha from '../components/ProdutosLinha';
 import ProdutosLinha2 from '../components/ProdutosLinha2';
+import Destaques from '../components/Destaques';
 
 function Home() {
   return (
@@ -17,6 +18,8 @@ function Home() {
         </div>
 
         <ProdutosLinha/>
+
+        <Destaques/>
 
         <div className='titulo-home-div'>
           <h2 className='titulo-home-novidades'>Mais Vendidos</h2>

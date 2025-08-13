@@ -483,9 +483,20 @@ main{
 
 .produtos-main-header {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   margin-bottom: 30px;
+}
+
+.produtos-main-cadastro-bar {
+  background: #D6AB60;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 18px;
+  gap: 24px;
 }
 
 .produtos-main-titulo {
@@ -496,15 +507,24 @@ main{
 }
 
 .produtos-main-cadastro {
-  background: #f5e2b8;
-  border-radius: 8px;
-  padding: 10px 18px;
-  font-size: 15px;
-  color: #340A0B;
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   gap: 2px;
+  font-size: 15px;
+  color: #222;
+  font-weight: bold;
+}
+
+.produtos-main-cadastro b {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.produtos-main-cadastro span {
+  font-size: 13px;
+  color: #444;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .produtos-main-email {
@@ -513,9 +533,28 @@ main{
   border-radius: 10px;
   border: none;
   font-size: 15px;
-  background: #f5e2b8;
+  background: #fff;
   color: #340A0B;
   width: 220px;
+  border: none;
+  border-style: none;
+}
+
+.produtos-main-enviar {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #888;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.produtos-main-enviar:hover {
+  background: #e8c382;
 }
 
 .produtos-grid {
@@ -584,7 +623,7 @@ main{
 }
 
 .produto-desconto {
-  background: #e8c382;
+  background: #D6AB60;
   border-radius: 10px;
   padding: 8px 12px;
   font-size: 14px;
@@ -603,3 +642,25 @@ main{
   margin-top: 2px;
 }
 
+.destaques-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px 0;
+}
+
+.destaques-img {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  max-width: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.destaques-img:hover {
+  transform: scale(1.05);
+}
