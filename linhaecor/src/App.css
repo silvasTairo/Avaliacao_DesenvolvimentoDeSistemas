@@ -664,3 +664,163 @@ main{
 .destaques-img:hover {
   transform: scale(1.05);
 }
+
+/* ----------------- CADASTRO ---------------- */
+
+.cadastro-bg {
+  width: 100vw;
+  height: 100vh;
+  background: #E8C382;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cadastro-container {
+  display: flex;
+  width: 90vw;
+  height: 80vh;
+  box-shadow: 0 0 40px #a88a54;
+  border-radius: 0 0 0 0;
+  overflow: hidden;
+}
+
+.cadastro-form-side {
+  background: #340A0B;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cadastro-form-box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cadastro-form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cadastro-titulo {
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.cadastro-subtitulo {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.cadastro-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 18px;
+  padding: 8px 0;
+  outline: none;
+}
+
+.cadastro-input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+.cadastro-link {
+  color: #b8a9a9;
+  font-size: 15px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.cadastro-btn {
+  background: #E8C382;
+  color: #340A0B;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 0;
+  width: 80%;
+  margin: 18px auto 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cadastro-btn:hover {
+  background: #d8b06a;
+}
+
+.cadastro-img-side {
+  background: #E8C382;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cadastro-img-box {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.cadastro-bemvindo {
+  color: #340A0B;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.cadastro-estudio {
+  color: #340A0B;
+  font-size: 38px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.cadastro-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cadastro-img {
+  height: 120px;
+  object-fit: contain;
+  background: none;
+}
+
+.cadastro-bemvindo-row {
+  display: flex;
+  align-items: center;
+
+
+}
+
+.cadastro-bemvindo-img {
+  height: 200px;
+  width: auto;
+
+}

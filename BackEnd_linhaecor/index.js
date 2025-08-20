@@ -1,6 +1,6 @@
-require("dotenv").config(); // Ele procura o arquivo .env na raiz do projeto e carrega as variáveis ​​que estão no arquivo .env na memória.
+require("dotenv").config(); 
 
-const db = require("./db");
+const pool = require('./db');
 
 const port = process.env.PORT;
 
@@ -8,10 +8,7 @@ const express = require('express');
 
 const app = express();
 
-// como os dados que vamos inserir no banco de dados estão chegando no formato .json, temos que preparar o back-end para receber esses dados
 app.use(express.json());
-
-// app.get('caminho da rota', (função de callback que na verdade é a função que vai ser disparada quando a rota é chamada)=> {})
 
 app.get('/', (req, res) => {
     res.json({
@@ -27,19 +24,26 @@ app.get('/clientes/:id', async (req, res) => {
 })
 
 // Rota para listar todos os clientes
-app.get('/clientes', async (req, res) => {
+app.get('/Clientes', async (req, res) => {
     const clientes = await db.selectCustomers();
 
     res.json(clientes);
 })
 
-// Rota para inserir clientes
-// Para testar esta rota vamos utilizar o postman
-               // Adiciona "app.use(express.json());" no começo do código
-app.post('/clientes', async (req, res) => {
-    await db.insertCustomer(req.body);
-    res.sendStatus(201) // 201 é o código de sucesso
-})
+app.post('/api/cadastro', async (req, res) => {
+  const { nome, email, senha } = req.body;
+  console.log(req.body);
+  try {
+    await pool.query(
+      'INSERT INTO "Clientes" (nome, email, senha) VALUES ($1, $2, $3)',
+      [nome, email, senha]
+    );
+    res.status(201).json({ mensagem: 'Cadastro realizado!' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: 'Erro ao cadastrar.' });
+  }
+});
 
 // Rota para editar/atualizar clientes
 app.patch("/clientes/:id", async (req, res) => {
